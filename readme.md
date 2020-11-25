@@ -15,6 +15,12 @@
 
    * Answer is Andorra at 83.5%
 
+### Question 4: Using JOIN … ON, what is the capital of Spain (ESP)?
+
+
+### Question 5: Using JOIN … ON, list all the languages spoken in the 'Southeast Asia' region.
+
+
 ### Question 8: Using IS NOT NULL, ORDER BY, LIMIT, what country has the lowest life expectancy?
    * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy limit 1;
    
