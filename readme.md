@@ -13,4 +13,9 @@
 ### Question 3: Using IS NOT NULL, ORDER BY, LIMIT, what country has the highest life expectancy
    * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy desc limit 1;
 
-   * Answer is Andorra
+   * Answer is Andorra at 83.5%
+
+### Question 8: Using IS NOT NULL, ORDER BY, LIMIT, what country has the lowest life expectancy?
+   * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy limit 1;
+   
+   * Answer is Zambia at 37.2%
