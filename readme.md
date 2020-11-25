@@ -10,4 +10,7 @@
 
    * Life Expectancy : 75.1 , Population : 37032000
 
-### Question 3: Using IS NOT NULL, ORDER BY, LIMIT, what country has the highest life expectancy?
+### Question 3: Using IS NOT NULL, ORDER BY, LIMIT, what country has the highest life expectancy
+   * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy desc limit 1;
+
+   * Answer is Andorra
