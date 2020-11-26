@@ -21,7 +21,7 @@
 ### Question 5: Using JOIN … ON, list all the languages spoken in the 'Southeast Asia' region.
 
 ### Question 6: SELECT 25 Cities around the world that start with the letter F in a single Query
-   * SELECT Name, CountryCode FROM city WHERE Name LIKE ('F%');
+   * SELECT Name, CountryCode FROM city WHERE Name LIKE 'F%';
 
 ### Question 8: Using IS NOT NULL, ORDER BY, LIMIT, what country has the lowest life expectancy?
    * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy limit 1;
