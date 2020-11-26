@@ -27,3 +27,8 @@
    * SELECT Name FROM country WHERE LifeExpectancy is NOT NULL ORDER BY LifeExpectancy limit 1;
    
    * Answer is Zambia at 37.2%
+
+### Question 9: Using Aggregate find the total number of countries in the database
+   * SELECT COUNT(Code) FROM country;
+   
+   * Answer is 239
