@@ -116,14 +116,52 @@
 
 ### Question 14: List every unique world language, according to the World database.
 
+   * SELECT DISTINCT language, countrycode FROM countrylanguage;
+
+    * Answer is 984 rows in set, meaning 984 individual languages.
+
 ### Question 15: What are the top 10 richest countries by GDP?
+
+   * SELECT Code, Name, Continent, GNP FROM country ORDER BY GNP DESC LIMIT 10;
+
+    * Answer is 1. United States, 2. Japan, 3. Germany, 4. France, 5. United Kingdom
+      6. Italy, 7. China, 8. Brazil, 9. Canada, 10. Spain
 
 ### Question 16: What are the top 10 largest countries by surface area?
 
+   * SELECT Code, Name, Continent, SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 10;
+
+    * Answer is 1. Russian Federation, 2. Antarctica, 3. Canada, 4. China, 5. United States
+      6. Brazil, 7. Australia, 8. India, 9. Argentina, 10. Kazakstan
+
 ### Question 17: List every country where over 50% of its population can speak French
+
+   * SELECT l.countrycode, l.language, l.percentage, c.code, c.name FROM countrylanguage l LEFT JOIN country c ON 	c.code = l.countrycode WHERE l.percentage > 50 AND l.language LIKE '%ench' ORDER BY l.percentage DESC;
+
+    * Answer is 1. Martinique, 2. Guadeloupe, 3. French Guiana, 4. France, 5. Reunion, 6. Saint Lucia, 7. Maritius
+     
 
 ### Question 18: Which country has the worst life expectancy? (Lowest)
 
+   * SELECT Name, LifeExpectancy FROM country WHERE LifeExpectancy > 0.000001 ORDER BY LifeExpectancy LIMIT 1;
+    
+    * Answer is Zambia at 37.2% Number over 0.0001 used to filter NULL results.
+   
+
 ### Question 19: What is the most common government form?
 
+   * SELECT COUNT(GovernmentForm) FROM country ORDER BY GovernmentForm;
+     SELECT COUNT(GovernmentForm) AS Republics FROM country WHERE GovernmentForm LIKE 'Republic';
+     SELECT COUNT(GovernmentForm) AS Monarchies FROM country WHERE GovernmentForm LIKE '%Monarchy';
+
+
+    * Out of 239 total entries for government form, 122 are republics, accounting for over 50%. A visual Majority
+      Was able to be established by ORDER BY GovernmentForm for the initial Query.
+  
+
+
 ### Question 20: How many countries have gained independance since records began?
+
+   * SELECT COUNT(IndepYear) FROM country WHERE IndepYear IS NOT NULL;
+
+    * Answer is 192 Total countries who have gained independance
